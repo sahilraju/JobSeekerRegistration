@@ -28,7 +28,7 @@ public class JobSeekerRegistration {
 			prepare.setString(3, qualification);
 			prepare.setInt(4, experience);
 			prepare.setString(5, domain);
-			prepare.setLong(6, expectedSalary); 
+			prepare.setLong(6, expectedSalary);  
 
 			effectedRows = prepare.executeUpdate();
 
@@ -42,7 +42,7 @@ public class JobSeekerRegistration {
 
 	}
 	
-	public void viewAllJobSeekers() {
+	public Object[] viewAllJobSeekers() {   
 		
 		try {
 			Statement statement = connection.createStatement();
@@ -64,7 +64,7 @@ public class JobSeekerRegistration {
 		} catch (SQLException e) { 
 			e.printStackTrace();
 		}
-		
+		return null; 
 	}
 
 }
